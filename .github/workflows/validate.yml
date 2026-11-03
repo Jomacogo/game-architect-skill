@@ -1,0 +1,24 @@
+name: Validar skill
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Comprobar sintaxis
+        run: python3 -m py_compile senior-game-architect/scripts/project_audit.py
+      - name: Ejecutar pruebas
+        run: python3 -m unittest discover -s tests -v
+      - name: Probar CLI
+        run: python3 senior-game-architect/scripts/project_audit.py senior-game-architect --output /tmp/skill-audit.json
