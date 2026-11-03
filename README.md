@@ -17,10 +17,8 @@ Skill en español para convertir un agente de IA en un colaborador de ingenierí
 
 Requisito: **Node.js 22.20 o superior** para usar la [CLI abierta `skills`](https://github.com/vercel-labs/skills). Revisa el contenido de una skill antes de instalarla: sus instrucciones y scripts se ejecutan con los permisos que concedas a tu agente.
 
-Después de subir este repositorio, sustituye `TU_USUARIO/TU_REPOSITORIO` y ejecuta:
-
 ```bash
-npx skills add https://github.com/TU_USUARIO/TU_REPOSITORIO --skill senior-game-architect -g -y
+npx skills add https://github.com/Jomacogo/game-architect-skill --skill senior-game-architect -g -y
 ```
 
 - `-g`: disponible para todos tus proyectos; omítelo para instalarla solo en el proyecto actual.
@@ -30,7 +28,7 @@ npx skills add https://github.com/TU_USUARIO/TU_REPOSITORIO --skill senior-game-
 Comprobar qué detecta el repositorio sin instalar:
 
 ```bash
-npx skills add https://github.com/TU_USUARIO/TU_REPOSITORIO --list
+npx skills add https://github.com/Jomacogo/game-architect-skill --list
 ```
 
 ## Instalación manual
@@ -38,7 +36,7 @@ npx skills add https://github.com/TU_USUARIO/TU_REPOSITORIO --list
 ### Claude Code, uso personal
 
 ```bash
-git clone https://github.com/TU_USUARIO/TU_REPOSITORIO.git
+git clone https://github.com/Jomacogo/game-architect-skill.git
 mkdir -p ~/.claude/skills
 cp -R TU_REPOSITORIO/senior-game-architect ~/.claude/skills/
 ```
@@ -96,7 +94,7 @@ git init
 git add .
 git commit -m "feat: add senior game architect skill"
 git branch -M main
-git remote add origin https://github.com/TU_USUARIO/TU_REPOSITORIO.git
+git remote add origin https://github.com/Jomacogo/game-architect-skill.git
 git push -u origin main
 ```
 
